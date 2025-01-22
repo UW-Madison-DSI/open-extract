@@ -1,7 +1,7 @@
 [project]
 name = "open-extract"
 version = "0.1.0"
-description = "Add your description here"
+description = "Extract structural data from PDFs"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

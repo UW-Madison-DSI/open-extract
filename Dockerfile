@@ -24,5 +24,5 @@ COPY . .
 # Inject app_type specific commands
 
 RUN uv tool install streamlit
-CMD ["streamlit", "run", "open_extract/main.py", "--server.port", "8080"]
+CMD ["streamlit", "run", "open_extract/app.py", "--server.port", "8080"]
 

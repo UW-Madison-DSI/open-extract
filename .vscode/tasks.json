@@ -4,7 +4,7 @@
         {
             "label": "dev-run",
             "type": "shell",
-            "command": "streamlit run open_extract/main.py"
+            "command": "streamlit run open_extract/app.py"
         },
         {
             "label": "docker-run",
