@@ -1,0 +1,47 @@
+{
+    "title": "Soybean Insect Pests",
+    "authors": [
+        "Papiernik, S. K.",
+        "Tilmon, K. J.",
+        "Hesler, L. S."
+    ],
+    "publication_date": "2018-01-01",
+    "publication_name": "Journal of Integrated Pest Management",
+    "publication_doi": "",
+    "methodology_summary": "The article reviews the pest status and management of nine insect species complexes that are early-season pests of soybean in the United States, including bean leaf beetle, grape colaspis, leafhoppers, seedcorn maggot, soybean aphid, threecornered alfalfa hopper, white grubs, and wireworms.",
+    "key_findings": "The pest status of these insects varies among regions and within regions, with some factors influencing their populations remaining unknown. Management options for each pest are discussed, including cultural controls, biological controls, and chemical controls.",
+    "study_independent_variables": [
+        "soybean insect pests",
+        "early-season pests"
+    ],
+    "study_dependent_variables": [
+        "pest status",
+        "management options"
+    ],
+    "data_points": [
+        {
+            "year": 2009,
+            "location": "United States",
+            "planting_date": "May-June",
+            "harvest_date": "September-October",
+            "crop_is_soybean": true,
+            "crop_yield": 40.0,
+            "crop_yield_units": "bushels/acre",
+            "treatment": "insecticidal seed treatment",
+            "seed_maturity": "early-maturity group",
+            "protein_and_oil_content_description": "high-protein and high-oil content soybean varieties"
+        },
+        {
+            "year": 2014,
+            "location": "United States",
+            "planting_date": "May-June",
+            "harvest_date": "September-October",
+            "crop_is_soybean": true,
+            "crop_yield": 45.0,
+            "crop_yield_units": "bushels/acre",
+            "treatment": "insecticidal seed treatment",
+            "seed_maturity": "mid-maturity group",
+            "protein_and_oil_content_description": "medium-protein and medium-oil content soybean varieties"
+        }
+    ]
+}

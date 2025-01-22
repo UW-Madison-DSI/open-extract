@@ -1,0 +1,63 @@
+{
+    "title": "Planting Date, Maturity, and Temperature Effects on Soybean Seed Yield and Composition",
+    "authors": [
+        "Spyridon Mourtzinis",
+        "Adam P. Gaspar",
+        "Seth L. Naeve",
+        "Shawn P. Conley"
+    ],
+    "publication_date": "2017",
+    "publication_name": "Agronomy Journal",
+    "publication_doi": "",
+    "methodology_summary": "The study used a randomized complete block design in a split-plot arrangement with four replications to examine the effects of planting date, maturity group, and temperature on soybean seed yield and composition. The experiment was conducted at four locations in Wisconsin and Minnesota over three years (2014-2016).",
+    "key_findings": "The results showed that early planting (late April-early May) and using the longest maturity group (MG 2) had the highest yield, oil, and oleic acid potential across the examined region. However, if a seed with high protein content is the overarching goal, a compromise in lower seed yield may be necessary.",
+    "study_independent_variables": [
+        "planting date",
+        "maturity group",
+        "temperature"
+    ],
+    "study_dependent_variables": [
+        "soybean seed yield",
+        "protein content",
+        "oil content",
+        "oleic acid content"
+    ],
+    "data_points": [
+        {
+            "year": 2014,
+            "location": "Arlington, WI",
+            "planting_date": "1 May",
+            "harvest_date": "5 Oct.",
+            "crop_is_soybean": true,
+            "crop_yield": 4800.0,
+            "crop_yield_units": "kg/ha",
+            "treatment": "MG2",
+            "seed_maturity": "R8",
+            "protein_and_oil_content_description": "High protein and oil content"
+        },
+        {
+            "year": 2015,
+            "location": "Hancock, WI",
+            "planting_date": "20 May",
+            "harvest_date": "14 Oct.",
+            "crop_is_soybean": true,
+            "crop_yield": 4600.0,
+            "crop_yield_units": "kg/ha",
+            "treatment": "MG1.5",
+            "seed_maturity": "R7",
+            "protein_and_oil_content_description": "Medium protein and oil content"
+        },
+        {
+            "year": 2016,
+            "location": "St. Paul, MN",
+            "planting_date": "1 June",
+            "harvest_date": "17 Oct.",
+            "crop_is_soybean": true,
+            "crop_yield": 4400.0,
+            "crop_yield_units": "kg/ha",
+            "treatment": "MG2",
+            "seed_maturity": "R8",
+            "protein_and_oil_content_description": "High protein and oil content"
+        }
+    ]
+}
