@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dev-run",
+            "type": "shell",
+            "command": "streamlit run open_extract/main.py"
+        },
+        {
+            "label": "docker-run",
+            "type": "shell",
+            "command": "docker build -t open_extract . && docker run --rm -p 8080:8080 open_extract"
+        }
+    ]
+}
