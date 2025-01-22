@@ -1,0 +1,49 @@
+{
+    "title": "Defining Optimal Soybean Sowing Dates across the US",
+    "authors": [
+        "Spyridon Mourtzinis",
+        "James E. Specht",
+        "Shawn P. Conley"
+    ],
+    "publication_date": "February 26, 2019",
+    "publication_name": "Scientific Reports",
+    "publication_doi": "10.1038/s41598-019-38971-3",
+    "methodology_summary": "The study used machine learning on US soybean yield data from cultivar trials conducted in 27 states from 2007 to 2016 to examine crop sensitivity to varying in-season weather conditions and identify optimal sowing dates. The analysis included conditional inference regression tree analyses, multiple-site trials, and a machine learning model to predict state-year-specific trial soybean yields across the US based on coordinates and weather variables.",
+    "key_findings": "The study found that: 1) Vpd during 61-90 DAS was the most important predictor of soybean yield. 2) Sowing 12 days earlier than what was practiced during this decade (2007-2016) across the US would have resulted in a 10% greater total yield and a cumulative monetary gain of ca. US$9 billion. 3) Southeastern state producers could adjust sowing dates by 30 days earlier than those typically used, resulting in a 377 to 704 kg/ha average yield increase.",
+    "study_independent_variables": [
+        "Vapor pressure deficit (Vpd)",
+        "Cumulative precipitation",
+        "Solar radiation",
+        "Maximum temperatures",
+        "Relative humidity"
+    ],
+    "study_dependent_variables": [
+        "Soybean yield"
+    ],
+    "data_points": [
+        {
+            "year": 2007,
+            "location": "US",
+            "planting_date": "April-May",
+            "harvest_date": "September-October",
+            "crop_is_soybean": true,
+            "crop_yield": 2.5,
+            "crop_yield_units": "tons/ha",
+            "treatment": "early_planting",
+            "seed_maturity": "Maturity Group (MG) III",
+            "protein_and_oil_content_description": "High protein and oil content"
+        },
+        {
+            "year": 2008,
+            "location": "US",
+            "planting_date": "April-May",
+            "harvest_date": "September-October",
+            "crop_is_soybean": true,
+            "crop_yield": 2.7,
+            "crop_yield_units": "tons/ha",
+            "treatment": "late_planting",
+            "seed_maturity": "Maturity Group (MG) IV",
+            "protein_and_oil_content_description": "Medium protein and oil content"
+        }
+    ]
+}

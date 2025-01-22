@@ -1,0 +1,39 @@
+{
+    "title": "Planting Date, Maturity, and Temperature Effects on Soybean Seed Yield and Composition",
+    "authors": [
+        "Spyridon Mourtzinis",
+        "Adam P. Gaspar",
+        "Seth L. Naeve",
+        "Shawn P. Conley"
+    ],
+    "publication_date": "2017-01-01",
+    "publication_name": "Agronomy Journal",
+    "publication_doi": "10.2134/agronj2016.09.0535",
+    "methodology_summary": "The study used a randomized complete block design in a split-plot arrangement with four replications to examine the effects of planting date, maturity group, and temperature on soybean seed yield and composition.",
+    "key_findings": "1. Planting date and maturity group decisions can greatly affect yield and composition. 2. Temperature had a significant effect on seed yield and composition. 3. Planting date × maturity group should be chosen based on the product’s end use.",
+    "study_independent_variables": [
+        "planting date",
+        "maturity group",
+        "temperature"
+    ],
+    "study_dependent_variables": [
+        "seed yield",
+        "protein content",
+        "oil content",
+        "fatty acid composition"
+    ],
+    "data_points": [
+        {
+            "year": 2014,
+            "location": "Arlington, WI",
+            "planting_date": "May 1",
+            "harvest_date": "October 5",
+            "crop_is_soybean": true,
+            "crop_yield": 4800.0,
+            "crop_yield_units": "kg/ha",
+            "treatment": "MG2",
+            "seed_maturity": ">247,000 plants/ha",
+            "protein_and_oil_content_description": "Protein and oil exhibited a negative correlation (r = –0.25)"
+        }
+    ]
+}
