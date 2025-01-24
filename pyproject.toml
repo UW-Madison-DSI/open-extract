@@ -8,5 +8,7 @@ dependencies = [
     "ipykernel>=6.29.5",
     "llama-parse>=0.5.19",
     "ollama>=0.4.7",
+    "pymupdf>=1.25.2",
     "streamlit>=1.41.1",
+    "tqdm>=4.67.1",
 ]

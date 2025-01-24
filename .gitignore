@@ -12,3 +12,4 @@ nohup.out
 /tmp
 tmp.ipynb
 .DS_Store
+data/images/*
