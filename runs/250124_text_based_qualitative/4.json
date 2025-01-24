@@ -23,6 +23,7 @@
     "publication_doi": "10.1016/j.agrformet.2017.07.010",
     "methodology_summary": "The study used a novel approach that combines producer self-reported data, crop modeling, and a spatial framework to quantify yield gaps (Yg) and identify explanatory causes in the North-Central USA region. The approach involved: 1) collecting survey data on yield and management from 3568 producer fields over two crop seasons; 2) grouping fields into 10 technology extrapolation domains (TEDs) based on their soil, climate, and water regime; 3) estimating yield potential using a combination of crop modeling and boundary functions for water productivity; 4) calculating Yg as the difference between yield potential and average producer yield; and 5) identifying management practices that were concordantly associated with high- and low-yield fields. The study also used quantile regression to derive a boundary function for the relationship between producer yield and sowing date delay.",
     "key_findings": "The study found that: 1) soybean yield gaps in the North-Central USA region averaged 22% (rainfed) and 13% (irrigated) of the estimated yield potential; 2) sowing date was the most consistent factor explaining yield variation within the same TED and year, with magnitude of yield response to sowing delay dependent upon degree of water deficit during pod-setting phase; 3) other practices also explained yield variation (tillage, and in-season foliar fungicide and/or insecticide, and artificial drainage), but the degree to which each of these practices influences yield depended upon TED.",
+    "insights_on_the_effect_of_plant_date_on_soybean_yield": "The study found that sowing date was the most consistent factor explaining yield variation within the same TED and year. The magnitude of yield response to sowing delay was dependent upon degree of water deficit during pod-setting phase. This suggests that optimizing sowing date can help reduce yield gaps in soybean production.",
     "study_independent_variables": [
         "sowing date",
         "tillage",
@@ -30,21 +31,32 @@
         "artificial drainage"
     ],
     "study_dependent_variables": [
-        "yield gap (Yg)",
-        "yield potential (Yp)"
+        "soybean yield"
     ],
     "data_points": [
         {
             "year": 2014,
-            "location": "North-Central USA region",
+            "location": "NC USA region",
             "planting_date": "May 15",
             "harvest_date": "October 1",
             "crop_is_soybean": true,
-            "crop_yield": 70.0,
-            "crop_yield_units": "bushels/acre",
+            "crop_yield": 3.5,
+            "crop_yield_units": "Mg ha-1",
             "treatment": "irrigated",
-            "seed_maturity": "Pioneer P93M11",
+            "seed_maturity": "MG 2.8",
             "protein_and_oil_content_description": "High protein and oil content"
+        },
+        {
+            "year": 2015,
+            "location": "NC USA region",
+            "planting_date": "May 20",
+            "harvest_date": "October 10",
+            "crop_is_soybean": true,
+            "crop_yield": 3.2,
+            "crop_yield_units": "Mg ha-1",
+            "treatment": "rainfed",
+            "seed_maturity": "MG 3.0",
+            "protein_and_oil_content_description": "Medium protein and oil content"
         }
     ]
 }
