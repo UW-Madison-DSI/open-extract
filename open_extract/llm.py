@@ -27,3 +27,10 @@ class Extractor:
         logging.debug(response)
         assert response.message.content is not None
         return self.target_model.model_validate_json(response.message.content)
+
+
+def keep_alive(
+    model: str, host: str | None = None, duration: int = -1
+) -> ollama.ChatResponse:
+    """Keep the model in memeory for a duration explicitly."""
+    return ollama.Client(host=host).chat(model=model, keep_alive=duration)
