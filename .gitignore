@@ -12,5 +12,5 @@ nohup.out
 /tmp
 tmp.ipynb
 .DS_Store
-data/images/*
-data/pdfs/screening_250205/
+data/prototype_250124/images/*
+data/screening_250205/**
