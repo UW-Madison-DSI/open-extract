@@ -4,7 +4,8 @@
     "remoteUser": "root",
     "features": {
         "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
-        "ghcr.io/devcontainers/features/github-cli:1": {}
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        "ghcr.io/tailscale/codespace/tailscale": {}
     },
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
@@ -19,6 +20,6 @@
             ]
         }
     },
-    "runArgs": ["--network=host"],
+    "runArgs": ["--network=host", "--device=/dev/net/tun"],
     "postCreateCommand": "chmod +x .devcontainer/post_create.sh && .devcontainer/post_create.sh"
 }
