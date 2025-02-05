@@ -3,11 +3,11 @@ import logging
 import ollama
 from pydantic import BaseModel
 
-from open_extract.data_model import Article
-
 
 class Extractor:
-    def __init__(self, model_name: str, ollama_host: str, target_model: Article):
+    def __init__(
+        self, model_name: str, ollama_host: str, target_model: type[BaseModel]
+    ):
         self.model_name = model_name
         self.ollama_host = ollama_host
         self.target_model = target_model
