@@ -48,3 +48,24 @@ class Screening(BaseModel):
     study_location: str = Field(..., description="Location of the study conducted")
     is_soybean_study: bool = Field(..., description="Was the study about soybean?")
     has_yield_data: bool = Field(..., description="Whether the study has yield data")
+
+
+class QA(BaseModel):
+    """This model is used to store the question and answer pairs with additional context."""
+
+    question: str = Field(..., description="The question that I am trying to answer")
+    study_is_answering_question: bool = Field(
+        ...,
+        description="Whether the study has useful information to answer the question",
+    )
+    useful_information_summary: str = Field(
+        ..., description="A summary of the useful information for the question"
+    )
+    supporting_data: str = Field(
+        ..., description="The data that supports answering the question"
+    )
+    answer: str = Field(..., description="The answer to the question")
+    confidence: int = Field(
+        ...,
+        description="Confidence in the answer (0-5), 0 being the lowest and 5 being the highest",
+    )

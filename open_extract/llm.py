@@ -3,6 +3,19 @@ import logging
 import ollama
 from pydantic import BaseModel
 
+QUESTIONS = {
+    "Q1": "How do different seed treatments (insecticide and fungicide) impact soybean yield when planted before May 1 compared to after May 1?",
+    "Q2": "What is the effectiveness of foliar fungicide applications in controlling white mold and improving soybean yield in fields where white mold is a primary concern?",
+    "Q3": "How does the application of foliar fungicide at the R3 growth stage for general disease control affect soybean yield compared to other growth stages?",
+    "Q4": "Which row-spacing and seeding rate combinations are most effective in maximizing soybean yield in the North Central U.S. and how do these compare to the mid-south and southern U.S.?",
+    "Q5": "What environmental and planting date conditions best support the effectiveness of insecticidal and fungicide seed treatments in protecting soybean yield?",
+    "Q6": "How do no-till practices influence insect and slug pest pressures and soybean yield in different regions?",
+    "Q7": "What are the primary factors that predict foliar and root diseases in soybeans across various U.S. regions and how do these factors interact with pest management practices?",
+    "Q8": "How does the presence of cover crops affect weed emergence, insect pest pressures, and overall soybean yield?",
+    "Q9": "What are the long-term trends in soybean yield improvement associated with changes in planting dates, row spacing, tillage practices, and other agronomic inputs?",
+    "Q10": "Which pest management strategies (e.g., seed treatments, scouting-based treatments) are most consistent in protecting soybean yield under varying environmental and biotic conditions?",
+}
+
 
 class Extractor:
     def __init__(
