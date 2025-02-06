@@ -14,3 +14,4 @@ tmp.ipynb
 .DS_Store
 data/prototype_250124/images/*
 data/screening_250205/**
+runs/
