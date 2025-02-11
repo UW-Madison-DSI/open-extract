@@ -15,7 +15,7 @@ class DataPoint(BaseModel):
     protein_and_oil_content_description: str
 
 
-class ArticleV2(BaseModel):
+class Article(BaseModel):
     title: str
     authors: list[str]
     publication_date: str

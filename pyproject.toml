@@ -8,6 +8,7 @@ dependencies = [
     "ipykernel>=6.29.5",
     "llama-parse>=0.5.20",
     "markitdown>=0.0.1a3",
+    "matplotlib>=3.10.0",
     "ollama>=0.4.7",
     "openparse>=0.7.0",
     "pymupdf>=1.25.2",
