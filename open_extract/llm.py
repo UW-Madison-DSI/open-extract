@@ -17,7 +17,7 @@ QUESTIONS = {
 }
 
 
-class Extractor:
+class OLLAMAExtractor:
     def __init__(
         self, model_name: str, ollama_host: str, target_model: type[BaseModel]
     ):
