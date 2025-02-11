@@ -26,11 +26,13 @@ class Extractor:
         self.target_model = target_model
         self.ollama_client = ollama.Client(host=ollama_host)
 
-    def format_prompt(self, content: str) -> str:
-        return f"Extract data carefully from this academic paper: {content}"
-
     def run(self, content: str) -> BaseModel:
-        messages = [{"role": "user", "content": self.format_prompt(content)}]
+        system_message = {
+            "role": "system",
+            "content": "You are a research assistant specializing in agriculture, your role is to extract data from academic papers and provide accurate answers based on their findings.",
+        }
+        user_message = {"role": "user", "content": content}
+        messages = [system_message, user_message]
         response = self.ollama_client.chat(
             model=self.model_name,
             messages=messages,
