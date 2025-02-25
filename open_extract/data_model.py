@@ -1,5 +1,12 @@
 from pydantic import BaseModel, Field
 from pathlib import Path
+from enum import StrEnum
+
+
+class DocumentType(StrEnum):
+    PRIMARY_RESEARCH = "primary_research"
+    REVIEW_PAPER = "review_paper"
+    BOOK_CHAPTER = "book_chapter"
 
 
 class DataPoint(BaseModel):
@@ -44,6 +51,10 @@ class Screening(BaseModel):
     publication_year: int
     publication_name: str
     publication_doi: str
+    document_type: DocumentType = Field(
+        ...,
+        description="Type of the document, select on from: primary_research, review_paper, book_chapter",  # CAUTION: This is not reliable, use OpenAlex instead
+    )
     study_within_us: bool = Field(..., description="Was the study conducted in the US")
     study_location: str = Field(..., description="Location of the study conducted")
     is_soybean_study: bool = Field(..., description="Was the study about soybean?")
