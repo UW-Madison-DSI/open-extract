@@ -16,3 +16,4 @@ data/prototype_250124/images/*
 data/screening_250205/**
 runs/
 *egg-info/
+uv.lock
