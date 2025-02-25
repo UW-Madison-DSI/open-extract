@@ -5,6 +5,7 @@ description = "Extract structural data from PDFs"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "dspy>=2.6.6",
     "ipykernel>=6.29.5",
     "langflow>=1.1.4.post1",
     "llama-parse>=0.5.20",
