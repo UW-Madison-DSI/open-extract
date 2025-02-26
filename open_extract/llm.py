@@ -1,5 +1,5 @@
 import logging
-
+import openai
 import ollama
 from pydantic import BaseModel
 
@@ -44,8 +44,35 @@ class OLLAMAExtractor:
         return self.target_model.model_validate_json(response.message.content)
 
 
+class OPENAIExtractor:
+    def __init__(self, model_name: str, target_model: type[BaseModel]):
+        self.model_name = model_name
+        self.target_model = target_model
+        self.openai_client = openai.OpenAI()
+
+    def run(self, content: str) -> BaseModel:
+        system_message = {
+            "role": "system",
+            "content": "You are a research assistant specializing in agriculture, your role is to extract data from academic papers and provide accurate answers based on their findings.",
+        }
+        user_message= {
+            "role": "user",
+            "content": content,
+        }
+
+        completion = self.client.beta.chat.completions.parse(
+            model=self.model,
+            messages=[system_message, user_message],
+            response_format=self.target_model,
+        )
+
+        if completion.choices[0].message.parsed is None:
+            raise ValueError("Failed to extract paper structure.")
+        return completion.choices[0].message.parsed
+
+
 def keep_alive(
     model: str, host: str | None = None, duration: int = -1
 ) -> ollama.ChatResponse:
-    """Keep the model in memeory for a duration explicitly."""
+    """Keep the model in memory for a duration explicitly."""
     return ollama.Client(host=host).chat(model=model, keep_alive=duration)
