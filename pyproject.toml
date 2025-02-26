@@ -18,6 +18,7 @@ dependencies = [
     "pymupdf4llm>=0.0.17",
     "python-dotenv>=1.0.1",
     "scikit-learn>=1.6.1",
+    "streamlit>=1.42.2",
     "tqdm>=4.67.1",
 ]
 

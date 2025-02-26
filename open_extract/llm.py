@@ -17,6 +17,61 @@ QUESTIONS = {
 }
 
 
+DECOMPOSER_SYSTEM_PROMPT = """
+You are a research assistant specializing in agriculture, your role is to break down a complex research question into a few smaller questions, you will use these questions to determine whether a paper is related to a given question.
+You need to check:
+
+- Whether the study measures or evaluates the key element in our question.
+- Whether the study design addresses a significant part of that question.
+
+For example: 
+
+Input: What is the effectiveness of foliar fungicide applications in controlling white mold and improving soybean yield in fields where white mold is a primary concern?  
+
+Output: 
+a. Were foliar fungicide treatments evaluated in this study? 
+b. Was a white mold control treatment evaluated in this study?
+...
+Input: How do no-till practices influence insect and slug pest pressures and soybean yield in different regions? 
+
+Output:
+a. Were tillage practices a treatment in this study? 
+b. Was pest pressure evaluated?  
+c. Was soybean yield evaluated?
+...
+"""
+
+def keep_alive(
+    model: str, host: str | None = None, duration: int = -1
+) -> ollama.ChatResponse:
+    """Keep the model in memory for a duration explicitly."""
+    return ollama.Client(host=host).chat(model=model, keep_alive=duration)
+
+
+def remove_deepseek_thinking_tokens(response: str) -> str:
+    """Remove thinking tokens from the response."""
+    return response.split("</think>")[-1].strip()
+
+
+def decompose(question: str) -> str:
+    """Decompose with Deepseek r1."""
+    client = ollama.Client(host="http://olvi-1:11434")
+    response = client.chat(
+        model="deepseek-r1-70b-15k-ctx",
+        messages=[
+            {
+                "role": "system",
+                "content": DECOMPOSER_SYSTEM_PROMPT
+            },
+            {
+                "role": "user",
+                "content": f"Break down this question into smaller ones: {question}"
+            }
+        ]
+    )
+    return remove_deepseek_thinking_tokens(response.message.content)
+
+
 class OLLAMAExtractor:
     def __init__(
         self, model_name: str, ollama_host: str, target_model: type[BaseModel]
@@ -71,8 +126,6 @@ class OPENAIExtractor:
         return completion.choices[0].message.parsed
 
 
-def keep_alive(
-    model: str, host: str | None = None, duration: int = -1
-) -> ollama.ChatResponse:
-    """Keep the model in memory for a duration explicitly."""
-    return ollama.Client(host=host).chat(model=model, keep_alive=duration)
+
+
+
